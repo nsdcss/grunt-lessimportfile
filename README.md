@@ -1,6 +1,6 @@
 # grunt-lessimportfile
 
-> Create LESS import files automatically
+> Create a LESS import file automatically
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
