@@ -30,18 +30,18 @@ exports.importfile = {
   default_options: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default_options');
+    var actual = grunt.file.read('tmp/styles.collector.default_options.less');
     var expected = grunt.file.read('test/expected/default_options');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
+    test.equal(actual, expected, 'The file "tmp/styles.collector.default_options.less" has been created or updated.');
 
     test.done();
   },
   custom_options: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/custom_options');
+    var actual = grunt.file.read('tmp/styles.collector.custom_options.less');
     var expected = grunt.file.read('test/expected/custom_options');
-    test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
+    test.equal(actual, expected, 'The file "tmp/styles.collector.custom_options.less" has been created or updated.');
 
     test.done();
   },

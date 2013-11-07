@@ -1,1 +1,4 @@
-Testing, 1 2 3.
+@import "../test/fixtures/import/base/z-test-1.less";
+@import "../test/fixtures/import/reference/module-test.less";
+@import "../test/fixtures/import/ui/some-ui-module.less";
+@import "../test/fixtures/variables.less";
