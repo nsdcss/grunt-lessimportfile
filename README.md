@@ -41,7 +41,7 @@ grunt.initConfig({
 Type: `Boolean`
 Default value: `false`
 
-Import the specified files as a reference `@import (reference) "file.less"`
+Import the specified files as a reference. It will create an import-statement as this: `@import (reference) "file.less"`
 
 #### options.copyExisting
 Type: `Boolean`
