@@ -1,6 +1,6 @@
 # grunt-lessimportfile
 
-> Create a LESS import file automatically
+This Plugin lets your create a LESS import file automatically by running threw specified folders. This is useful if you are at the beginning of the development-process and want easily change the structure or names of your files and folders without having to care for the update statements in your "master" less file.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -24,7 +24,7 @@ In your project's Gruntfile, add a section named `importfile` to the data object
 
 ```js
 grunt.initConfig({
-  importfile: {
+  lessimportfile: {
     options: {
       // Task-specific options go here.
     },
