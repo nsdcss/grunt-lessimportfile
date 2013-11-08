@@ -37,47 +37,63 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
+#### options.asReference
+Type: `Boolean`
+Default value: `false`
 
-A string value that is used to do something with whatever.
+Import the specified files as a reference `@import (reference) "file.less"`
 
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
+#### options.copyExisting
+Type: `Boolean`
+Default value: `false`
 
-A string value that is used to do something else with whatever else.
+Keep the content of the specified target file.
 
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+In this example, the default options are used.
 
 ```js
 grunt.initConfig({
-  importfile: {
+  lessimportfile: {
     options: {},
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'your-framework/styles.collector.less': ['your-framework/modules/**/*.less', 'your-framework/variables.less']
     },
   },
 })
 ```
 
 #### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+In this example, custom options are used.
 
 ```js
 grunt.initConfig({
-  importfile: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+  lessimportfile: {
+    setup: {
+	  options: {},
+	  files: {
+		'your-framework/styles.collector.less': ['your-framework/base/**/*.less']
+	  },
+	},
+	framework: {
+	  options: {
+		asReference: true,
+		copyExisting: true
+	  },
+	  files: {
+		'your-framework/styles.collector.less': ['your-framework/abstract-modules/**/*.less'],
+	  },
+	},
+	ui: {
+	  options: {
+		copyExisting: true
+	  },
+	  files: {
+		'your-framework/styles.collector.less': ['your-framework/ui/**/*.less', 'your-framework/variables.less']
+	  },
+	},
   },
 })
 ```
