@@ -41,7 +41,7 @@ grunt.initConfig({
 Type: `Boolean`
 Default value: `false`
 
-Import the specified files as a reference. It will create an import-statement as this: `@import (reference) "file.less"`
+Import the specified files as a reference. It will create an import-statement like this: `@import (reference) "file.less"`
 
 #### options.copyExisting
 Type: `Boolean`
@@ -59,7 +59,7 @@ grunt.initConfig({
   lessimportfile: {
     options: {},
     files: {
-      'your-framework/styles.collector.less': ['your-framework/modules/**/*.less', 'your-framework/variables.less']
+      'your-framework/master.less': ['your-framework/modules/**/*.less', 'your-framework/variables.less']
     },
   },
 })
@@ -74,7 +74,7 @@ grunt.initConfig({
     setup: {
 	  options: {},
 	  files: {
-		'your-framework/styles.collector.less': ['your-framework/base/**/*.less']
+		'your-framework/master.less': ['your-framework/base/**/*.less']
 	  },
 	},
 	framework: {
@@ -83,7 +83,7 @@ grunt.initConfig({
 		copyExisting: true
 	  },
 	  files: {
-		'your-framework/styles.collector.less': ['your-framework/abstract-modules/**/*.less'],
+		'your-framework/master.less': ['your-framework/abstract-modules/**/*.less'],
 	  },
 	},
 	ui: {
@@ -91,7 +91,7 @@ grunt.initConfig({
 		copyExisting: true
 	  },
 	  files: {
-		'your-framework/styles.collector.less': ['your-framework/ui/**/*.less', 'your-framework/variables.less']
+		'your-framework/master.less': ['your-framework/ui/**/*.less', 'your-framework/variables.less']
 	  },
 	},
   },
