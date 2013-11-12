@@ -129,3 +129,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ### 0.1.0
 
 + Initial Release
+
+### 0.2.0
+
++ Added some options to mark specific files (components) as optional
