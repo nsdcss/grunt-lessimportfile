@@ -98,6 +98,17 @@ grunt.initConfig({
 		'your-framework/master.less': ['your-framework/abstract-modules/**/*.less'],
 	  },
 	},
+	components: {
+	  options: {
+	    copyExisting: true,
+		includeAllComponents: false,
+		optionalComponentIdentifier: 'comp__',
+		optionalComponentsList: ['comp__flyout-nav.less', 'comp__accordion.less']
+	  },
+	  files: {
+		'your-framework/master.less': ['your-framework/components/**/*.less']
+	  },
+	},
 	ui: {
 	  options: {
 		copyExisting: true
