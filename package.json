@@ -1,7 +1,7 @@
 {
   "name": "grunt-lessimportfile",
   "description": "Create LESS import files automatically",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/nsdcss/grunt-lessimportfile",
   "author": {
     "name": "Nikolaj Sokolowski",
