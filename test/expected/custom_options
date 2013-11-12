@@ -1,4 +1,5 @@
 @import "../test/fixtures/import/base/z-test-1.less";
 @import (reference) "../test/fixtures/import/reference/module-test.less";
+@import "../test/fixtures/import/components/oc__optional-component.less";
 @import "../test/fixtures/import/ui/some-ui-module.less";
 @import "../test/fixtures/variables.less";

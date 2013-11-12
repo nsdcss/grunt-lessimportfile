@@ -49,6 +49,18 @@ Default value: `false`
 
 Keep the content of the specified target file.
 
+#### options.optionalComponentIdentifier
+Type: `String`
+Default value: `"oc__"`
+
+#### options.includeAllComponents
+Type: `Boolean`
+Default value: `true`
+
+#### options.optionalComponentsList
+Type: `Array`
+Default value: `[]`
+
 ### Usage Examples
 
 #### Default Options

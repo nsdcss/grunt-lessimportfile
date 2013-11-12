@@ -52,6 +52,17 @@ module.exports = function(grunt) {
 					'tmp/styles.collector.custom_options.less': ['test/fixtures/import/reference/**/*.less'],
 				},
 			},
+			custom_options_components: {
+				options: {
+					copyExisting: true,
+					includeAllComponents: false,
+					optionalComponentIdentifier: 'oc__',
+					optionalComponentsList: ['oc__optional-component.less']
+				},
+				files: {
+					'tmp/styles.collector.custom_options.less': ['test/fixtures/import/components/**/*.less']
+				},
+			},
 			custom_options_ui: {
 				options: {
 					copyExisting: true
