@@ -20,6 +20,7 @@ module.exports = function(grunt) {
 		var options = this.options({
 			asReference: false,
 			copyExisting: false,
+			asReferenceIdentifier: '__',
 			optionalComponentIdentifier: 'oc__',
 			includeAllComponents: true,
 			optionalComponentsList: []
@@ -27,6 +28,7 @@ module.exports = function(grunt) {
 
 		var importStr = "";
 		var optionalComponentIdentifierMatch = new RegExp('^' + options.optionalComponentIdentifier,"g");
+		var asReferenceIdentifierMatch = new RegExp('^' + options.asReferenceIdentifier,"g");
 
 		var checkIfNeededComponent = function(filepath) {
 			var fileName = p.basename(filepath);
@@ -39,6 +41,15 @@ module.exports = function(grunt) {
 				}
 			} else {
 				return true;
+			}
+		};
+
+		var checkIfAsReference = function(filepath) {
+			var fileName = p.basename(filepath);
+			if(fileName.match(asReferenceIdentifierMatch)) {
+				return true;
+			} else {
+				return false;
 			}
 		};
 
@@ -65,7 +76,7 @@ module.exports = function(grunt) {
 					}
 				}
 			}).forEach(function(sf) {
-					importStr += '@import ' + (options.asReference ? '(reference) "' : '"') + p.relative(p.dirname(f.dest), sf) + '";\n';
+					importStr += '@import ' + ((options.asReference || checkIfAsReference(sf)) ? '(reference) "' : '"') + p.relative(p.dirname(f.dest), sf) + '";\n';
 				});
 
 			// Write the destination file.

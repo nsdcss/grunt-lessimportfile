@@ -37,6 +37,14 @@ grunt.initConfig({
 
 ### Options
 
+#### options.asReferenceIdentifier
+asReferenceIdentifier
+Type: `String`
+Default value: `"__"`
+
+Import the prefixed file as a reference. It will create an import-statement like this: `@import (reference) "__file
+.less"`
+
 #### options.asReference
 Type: `Boolean`
 Default value: `false`
@@ -84,7 +92,9 @@ In this example, custom options are used.
 grunt.initConfig({
   lessimportfile: {
     setup: {
-	  options: {},
+	  options: {
+	    asReferenceIdentifier: '_r_'
+	  },
 	  files: {
 		'your-framework/master.less': ['your-framework/base/**/*.less']
 	  },
@@ -133,3 +143,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ### 0.2.0
 
 + Added some options to mark specific files (components) as optional
+
+### 0.3.0
+
++ Added an option to import files as reference via a custom file prefix

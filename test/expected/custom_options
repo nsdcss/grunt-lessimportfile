@@ -1,3 +1,5 @@
+@import "../test/fixtures/import/base/__z-inline-reference-default.less";
+@import (reference) "../test/fixtures/import/base/_r_z-inline-reference-custom.less";
 @import "../test/fixtures/import/base/z-test-1.less";
 @import (reference) "../test/fixtures/import/reference/module-test.less";
 @import "../test/fixtures/import/components/oc__optional-component.less";

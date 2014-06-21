@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 			},
 			custom_options_setup: {
 				options: {
-
+					asReferenceIdentifier: '_r_'
 				},
 				files: {
 					'tmp/styles.collector.custom_options.less': ['test/fixtures/import/base/**/*.less']
