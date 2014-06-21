@@ -42,14 +42,15 @@ asReferenceIdentifier
 Type: `String`
 Default value: `"__"`
 
-Import the prefixed file as a reference. It will create an import-statement like this: `@import (reference) "__file
-.less"`
+Import the prefixed file as a reference. It will create an import-statement like this: 
+`@import (reference) "__file.less"`
 
 #### options.asReference
 Type: `Boolean`
 Default value: `false`
 
-Import the specified files as a reference. It will create an import-statement like this: `@import (reference) "file.less"`
+Import the specified files as a reference. It will create an import-statement like this: 
+`@import (reference) "file.less"`
 
 #### options.copyExisting
 Type: `Boolean`
